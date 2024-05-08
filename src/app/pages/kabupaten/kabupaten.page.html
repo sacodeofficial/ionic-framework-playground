@@ -1,0 +1,28 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-title>
+            <b>Provinsi {{provinsi | titlecase}}</b>
+        </ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list-header>
+        <ion-label>
+            <b>Daftar Kabupaten</b>
+        </ion-label>
+    </ion-list-header>
+
+    @for (item of kabupaten; track $index) {
+        <ion-card>
+            <ion-item button detail lines="none" [routerLink]="['/kecamatan', item.id, item.nama]">
+                <ion-label>
+                    <b>{{item.nama | titlecase}}</b>
+                </ion-label>
+            </ion-item>
+        </ion-card>
+    }
+</ion-content>
