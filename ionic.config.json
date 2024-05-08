@@ -1,0 +1,7 @@
+{
+  "name": "sacode-ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

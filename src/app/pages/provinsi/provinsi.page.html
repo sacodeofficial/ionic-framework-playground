@@ -1,0 +1,19 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-title>
+            <b>Provinsi Indonesia</b>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    @for (item of provinsi; track $index) {
+        <ion-card>
+            <ion-item button detail lines="none" [routerLink]="['/kabupaten', item.id, item.nama]">
+                <ion-label>
+                    <b>{{item.nama | titlecase}}</b>
+                </ion-label>
+            </ion-item>
+        </ion-card>
+    }
+</ion-content>
